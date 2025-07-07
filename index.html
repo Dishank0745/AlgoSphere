@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlgoSphere</title>
+    <meta name="description" content="Explore and understand algorithms through interactive visualizations." />
+
+    <!-- External Fonts and Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+        crossorigin="anonymous"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="public/styling/style_home.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="brand">
+                <span class="brand__logo">AS</span>
+                <span class="brand__name">AlgoSphere</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="https://www.linkedin.com/in/dishank-thakkar-835650279/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/Dishank0745" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero__content">
+            <h1 class="hero__title">Welcome to AlgoSphere</h1>
+            <p class="hero__subtitle">Dive into interactive visualizations of classic algorithms</p>
+        </div>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="features">
+        <div class="container features__grid">
+            <div class="card" onclick="location.href='/public/graph/graph.html'">
+                <div class="card__icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h2 class="card__title">Pathfinding</h2>
+                <ul class="card__list">
+                    <li>Dijkstra's Algorithm</li>
+                    <li>A* Search</li>
+                    <li>Depth First Search (DFS)</li>
+                    <li>Breadth First Search (BFS)</li>
+                </ul>
+                <button class="card__action">Explore &rarr;</button>
+            </div>
+            <div class="card" onclick="location.href='/public/sorting/sorting_page.html'">
+                <div class="card__icon">
+                    <i class="fas fa-sort-amount-up"></i>
+                </div>
+                <h2 class="card__title">Sorting</h2>
+                <ul class="card__list">
+                    <li>Bubble Sort</li>
+                    <li>Insertion Sort</li>
+                    <li>Merge Sort</li>
+                    <li>Quick Sort</li>
+                    <li>Heap Sort</li>
+                </ul>
+                <button class="card__action">Explore &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>&copy; 2025 AlgoSphere. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoSphere - Sorting</title>
+  <meta name="description" content="Interactive visualization of sorting algorithms." />
+
+  <!-- External Fonts and Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Page Stylesheet -->
+  <link rel="stylesheet" href="../styling/style_sort.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="brand">
+        <span class="brand__logo">AS</span>
+        <span class="brand__name">AlgoSphere</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="https://www.linkedin.com/in/dishank-thakkar-835650279/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/Dishank0745" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls container">
+    <div class="control-group">
+      <label for="algo">Sorting Algorithm:</label>
+      <select id="algo" name="algo">
+        <option value="bubble">Bubble Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="heap">Heap Sort</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="count">Array Size:</label>
+      <input type="range" id="count" name="count" min="50" max="150" value="120" />
+    </div>
+    <div class="control-group">
+      <label for="speed">Visualization Speed:</label>
+      <input type="range" id="speed" name="speed" min="1" max="5000" value="500" />
+    </div>
+    <div class="control-actions">
+      <button id="start" class="btn">Start</button>
+      <button id="refresh" class="btn">Reload</button>
+    </div>
+  </section>
+
+  <!-- Array Display -->
+  <div class="container array-display">
+    <div id="ArrayBox" class="array-box"></div>
+  </div>
+
+  <script type="module" src="./sort.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2025 AlgoSphere. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

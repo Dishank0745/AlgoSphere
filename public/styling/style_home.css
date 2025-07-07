@@ -1,0 +1,170 @@
+/* style_home.css
+   Sleek Dark Mode Theme for AlgoSphere Homepage */
+
+/* Global Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.header {
+  background: #1f1f1f;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #333;
+  z-index: 100;
+}
+.header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.brand__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7f5af0;
+}
+.brand__name {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav__list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav__list a:hover {
+  color: #7f5af0;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%);
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+}
+
+/* Feature Cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.card__icon {
+  font-size: 2.5rem;
+  color: #7f5af0;
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.card__list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.card__list li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #cccccc;
+}
+
+.card__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #7f5af0;
+}
+
+.card__action {
+  background: #7f5af0;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card__action:hover {
+  background: #5c3ac9;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #2a2a2a;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: #181818;
+  border-top: 1px solid #333;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .features {
+    padding: 1rem;
+  }
+}

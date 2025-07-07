@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoSphere - Pathfinding</title>
+  <meta name="description" content="Interactive visualization of pathfinding algorithms." />
+
+  <!-- External Fonts and Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    crossorigin="anonymous"
+  />
+
+  <!-- Page Stylesheet -->
+  <link rel="stylesheet" href="../styling/style_graph.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="brand">
+        <span class="brand__logo">AS</span>
+        <span class="brand__name">AlgoSphere</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="https://www.linkedin.com/in/dishank-thakkar-835650279/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://github.com/Dishank0745" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls container">
+    <div class="control-group">
+      <label for="algo">Algorithm:</label>
+      <select id="algo" name="algo">
+        <option value="dijkstra">Dijkstra's Algorithm</option>
+        <option value="astar">A* Search</option>
+        <option value="dfs">Depth First Search (DFS)</option>
+        <option value="bfs">Breadth First Search (BFS)</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="weight">Graph Type:</label>
+      <select id="weight" name="weight">
+        <option value="unweighted">Unweighted</option>
+        <option value="weighted">Weighted</option>
+      </select>
+    </div>
+    <div class="control-group">
+      <label for="speed">Visualization Speed:</label>
+      <input type="range" id="speed" name="speed" min="1" max="20" value="15" />
+    </div>
+    <div class="control-actions">
+      <button class="btn start">Start</button>
+      <button class="btn reload">Reload</button>
+      <button class="btn reset">Reset</button>
+    </div>
+  </section>
+
+  <!-- Grid Container -->
+  <div class="container grid"></div>
+
+  <script type="module" src="../js/main.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; 2025 AlgoSphere. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

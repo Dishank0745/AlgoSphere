@@ -1,0 +1,182 @@
+/* style_graph.css
+   Dark Mode Theme for AlgoSphere Pathfinding Page
+*/
+
+/* Global Reset */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Header Styling (matching home) */
+.header {
+  background: #1f1f1f;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #333;
+  z-index: 100;
+}
+.header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.brand__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7f5af0;
+}
+.brand__name {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  text-decoration: none;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav__list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav__list a:hover {
+  color: #7f5af0;
+}
+
+/* Controls Container */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.control-group label {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+}
+.control-group select,
+.control-group input[type="range"] {
+  width: 180px;
+  padding: 0.4rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+.control-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles (reuse .btn) */
+.btn {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #5c3ac9;
+}
+
+/* Grid Container */
+.grid {
+  display: grid;
+  grid-template-rows: repeat(20, 30px);
+  grid-template-columns: repeat(40, 30px);
+  gap: 4px;
+  background: #1e1e1e;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 90%;
+}
+
+/* Node Styles */
+.ends,
+.Path_green,
+.Path_red,
+.before_start,
+.wall {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.ends { background: #059669; border: 1px solid #065f46; }
+.Path_green { background: #16a34a; }
+.Path_red   { background: #dc2626; }
+.before_start { background: #2a2a2a; border: 1px solid #444; }
+.wall { background: #334155; border: 1px solid #1e293b; }
+.ends:hover,
+.Path_green:hover,
+.Path_red:hover,
+.before_start:hover,
+.wall:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Styling (matching home) */
+.footer {
+  background: #1f1f1f;
+  padding: 1rem 2rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls { flex-direction: column; }
+  .grid {
+    grid-template-rows: repeat(20, 18px);
+    grid-template-columns: repeat(40, 18px);
+    gap: 2px;
+  }
+}
